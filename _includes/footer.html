@@ -1,0 +1,26 @@
+<footer class="footer">
+  {% if site.data.social %}
+    <ul class="social">
+      {% for social in site.data.social %}
+        <li class="social-item">
+          <a href="{{ social.url }}" target="_blank">
+            <i class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  <div class="footer-bottom">
+    <p class="copyright">
+      &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+      {%- if site.author -%}
+        &nbsp;<a href="{{ site.author.url }}" target="_blank">{{ site.author.name }}</a>
+      {%- endif -%}. All rights reserved. 
+    </p>
+
+    <p class="power">
+      Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/v4vong/jekyll-theme-fermi" target="_blank">Fermi</a>
+    </p>
+  </div>
+</footer>

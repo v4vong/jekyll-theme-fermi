@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="post-feed">
+
+  {% include post-cards.html %}
+
+</div>
+
+{% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a class="pagination-item prev" href="{{ paginator.previous_page_path | relative_url }}">&laquo;</a>
+    {% else %}
+      <span class="pagination-item prev">&laquo;</span>
+    {% endif %}
+
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <em class="pagination-item">{{ page }}</em>
+      {% elsif page == 1 %}
+        <a class="pagination-item" href="{{ '/' | relative_url }}">{{ page }}</a>
+      {% else %}
+        <a class="pagination-item" href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.next_page %}
+      <a class="pagination-item next" href="{{ paginator.next_page_path | relative_url }}">&raquo;</a>
+    {% else %}
+      <span class="pagination-item next">&raquo;</span>
+    {% endif %}
+  </div>
+{% endif %}

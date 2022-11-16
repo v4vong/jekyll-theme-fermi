@@ -1,0 +1,27 @@
+.pagination {
+  text-align: center;
+  margin-top: var(--spacer);
+
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: var(--body-fg);
+    }
+  }
+}
+
+.pagination-item {
+  padding: .3em .5em;
+  border: 1px solid var(--body-color-light);
+}
+
+.pagination .prev {
+  border-top-left-radius: var(--border-radius);
+  border-bottom-left-radius: var(--border-radius);
+}
+
+.pagination .next {
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+}

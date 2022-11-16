@@ -1,0 +1,22 @@
+<header class="masthead">
+  <h3 class="masthead-title">
+    <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  </h3>
+  {% if site.tagline %}
+    <h5 class="masthead-tagline">{{ site.tagline }}</h5>
+  {% endif %}
+
+  {% if site.data.navigation %}
+    <nav class="nav">
+      <ul class="nav-list">
+        {% for item in site.data.navigation %}
+          <li class="nav-item">
+            <a class="{% if page.url == item.url %}active{% endif %}" href="{{ item.url | relative_url }}">
+              {{ item.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+  {% endif %}
+</header>
