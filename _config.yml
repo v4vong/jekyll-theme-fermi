@@ -1,0 +1,13 @@
+title: Fermi
+tagline: Simple and pragmatic
+
+author:
+  name: Song-Zi Vong
+
+plugins:
+  - jekyll-paginate
+
+paginate: 7
+
+categories_path: /categories/
+tags_path: /tags/

@@ -1,0 +1,10 @@
+- title: Home
+  url: /
+- title: About
+  url: /about.html
+- title: Archive
+  url: /archive/
+- title: Download
+  url: https://github.com/v4vong/jekyll-theme-fermi/archive/refs/heads/main.zip
+- title: GitHub
+  url: https://github.com/v4vong/jekyll-theme-fermi

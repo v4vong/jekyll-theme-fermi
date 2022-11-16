@@ -1,0 +1,6 @@
+- title: Email
+  url: mailto:v4vong@gmail.com
+  icon: fas fa-envelope
+- title: GitHub
+  url: https://github.com/v4vong
+  icon: fab fa-github
